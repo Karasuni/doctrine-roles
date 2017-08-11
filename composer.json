@@ -1,0 +1,18 @@
+{
+  "require": {
+    "doctrine/orm": "2.4.*",
+    "symfony/yaml": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "apiV1\\" : "src/"
+    }
+  },
+  "scripts": {
+    "refresh": "composer dump-autoload --optimize",
+    "doctrine-update": "./vendor/bin/doctrine orm:schema-tool:update --force --dump-sql",
+    "doctrine-update-win": "\"vendor/bin/doctrine\" orm:schema-tool:update --force --dump-sql",
+    "setup": "php setup.php",
+    "test": "php test.php tomb"
+  }
+}

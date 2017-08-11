@@ -1,0 +1,23 @@
+apiV1\roles\User:
+  type: entity
+  table: users
+  id:
+    id:
+      type: string
+      length: 32
+  fields:
+    firstName:
+    lastName:
+    mailAddress:
+      nullable: true
+    office:
+      nullable: true
+    lastModified:
+      type: datetime
+  oneToMany:
+    groups:
+      targetEntity: GroupsUsers
+      mappedBy: user_id
+  lifecycleCallbacks:
+    prePersist: [ updateLastModified ]
+    preUpdate: [ updateLastModified ]

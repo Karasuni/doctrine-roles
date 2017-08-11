@@ -1,0 +1,21 @@
+apiV1\roles\GroupsUsers:
+  type: entity
+  table: groups_users
+  id:
+    group:
+      associationKey: true
+    user:
+      associationKey: true
+  fields:
+    role:
+  manyToOne:
+    group:
+      targetEntity: Group
+      joinColumn:
+        name: group_id
+        referencedColumnName: id
+    user:
+      targetEntity: User
+      joinColumn:
+        name: user_id
+        referencedColumnName: id
