@@ -13,6 +13,12 @@ class GroupsUsers {
     /** @var string */
     protected $role;
 
+    /* * * * * * * * * * * *
+     *
+     * Getters and Setters
+     *
+     * * * * * * * * * * * */
+
     /**
      * @return Group
      */
@@ -60,11 +66,5 @@ class GroupsUsers {
     {
         $this->role = $role;
     }
-
-    /* * * * * * * * * * * *
-     *
-     * Getters and Setters
-     *
-     * * * * * * * * * * * */
 
 }

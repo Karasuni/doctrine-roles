@@ -30,3 +30,11 @@ $groupUserLink->setUser($user);
 $groupUserLink->setRole("member");
 $em->persist($groupUserLink);
 $em->flush();
+
+// Creat user "jerryc", not a member of the group "admin"
+$user = new User();
+$user->setId("jerryc");
+$user->setFirstName("Jerry");
+$user->setLastName("Can");
+$em->persist($user);
+$em->flush();
