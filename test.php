@@ -1,8 +1,8 @@
 <?php
 // test.php <userId>
 
-use apiV1\roles\Admin;
-use apiV1\roles\User;
+use apiV1\authorization\Admin;
+use apiV1\authorization\User;
 
 require_once __DIR__ . "/src/EntityManager.php";
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace apiV1\roles;
+namespace apiV1\authorization;
 
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
@@ -25,7 +25,7 @@ class User
     /** @var DateTime */
     protected $lastModified;
 
-    /** @var  ArrayCollection|Group[] */
+    /** @var  ArrayCollection|Group_[] */
     protected $groups;
 
     public function __construct()
@@ -133,7 +133,7 @@ class User
     }
 
     /**
-     * @return Group[]|ArrayCollection
+     * @return Group_[]|ArrayCollection
      */
     public function getGroups()
     {

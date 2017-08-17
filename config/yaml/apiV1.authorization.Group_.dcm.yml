@@ -1,4 +1,4 @@
-apiV1\roles\Group:
+apiV1\authorization\Group_:
   type: entity
   table: groups
   id:

@@ -1,9 +1,9 @@
 <?php
 
-namespace apiV1\roles;
+namespace apiV1\authorization;
 
 class GroupsUsers {
-    /** @var Group */
+    /** @var Group_ */
     protected $group;
 
     /** @var User */
@@ -20,17 +20,17 @@ class GroupsUsers {
      * * * * * * * * * * * */
 
     /**
-     * @return Group
+     * @return Group_
      */
-    public function getGroup(): Group
+    public function getGroup(): Group_
     {
         return $this->group;
     }
 
     /**
-     * @param Group $group
+     * @param Group_ $group
      */
-    public function setGroup(Group $group)
+    public function setGroup(Group_ $group)
     {
         $this->group = $group;
     }

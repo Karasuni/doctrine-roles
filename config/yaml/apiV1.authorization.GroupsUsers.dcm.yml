@@ -1,4 +1,4 @@
-apiV1\roles\GroupsUsers:
+apiV1\authorization\GroupsUsers:
   type: entity
   table: groups_users
   id:
@@ -10,7 +10,7 @@ apiV1\roles\GroupsUsers:
     role:
   manyToOne:
     group:
-      targetEntity: Group
+      targetEntity: Group_
       joinColumn:
         name: group_id
         referencedColumnName: id

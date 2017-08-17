@@ -1,6 +1,6 @@
 <?php
 
-namespace apiV1\roles;
+namespace apiV1\authorization;
 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Query\Expr\Join;
@@ -15,7 +15,7 @@ class Admin
 
         $qb->select('gu')
             ->from(GroupsUsers::class, 'gu')
-            ->leftJoin(Group::class, 'g', Join::WITH, 'gu.group = g.id')
+            ->leftJoin(Group_::class, 'g', Join::WITH, 'gu.group = g.id')
             ->where('g.name = :group')
             ->andWhere('gu.user = :user')
             ->setParameter('group', 'admin')

@@ -1,15 +1,15 @@
 <?php
 
-use apiV1\roles\Group;
-use apiV1\roles\GroupsUsers;
-use apiV1\roles\User;
+use apiV1\authorization\Group_;
+use apiV1\authorization\GroupsUsers;
+use apiV1\authorization\User;
 
 require_once __DIR__ . "/src/EntityManager.php";
 
 $em = getEntityManager();
 
 // Create group "admin"
-$group = new Group();
+$group = new Group_();
 $group->setName("admin");
 $group->setDescription("Administrators");
 

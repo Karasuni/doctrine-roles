@@ -1,10 +1,10 @@
 <?php
 
-namespace apiV1\roles;
+namespace apiV1\authorization;
 
 use Doctrine\Common\Collections\ArrayCollection;
 
-class Group
+class Group_
 {
     /** @var int */
     protected $id;
